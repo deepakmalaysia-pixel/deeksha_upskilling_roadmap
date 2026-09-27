@@ -38,10 +38,10 @@ B.Sc. Computer Science — Canara College | CGPA: 8.75 | 2024
 CERTIFICATIONS
 Infosys Springboard: Database Management I & II, Software Engineering, Agile Development
 
-90-DAY SKILL ROADMAP DASHBOARD
+SELF-PACED SKILL ROADMAP DASHBOARD
 
-PHASE 1: Days 1–30 | Core Employability Skills
-Goal: Build the fundamentals employers expect in data roles.
+PHASE 1: FOUNDATION | SQL, Excel, and Core Data Skills
+Goal: Build the fundamentals steadily and confidently.
 
 Focus Areas:
 - SQL: joins, filters, group by, aggregate functions, subqueries, CTEs, data cleaning
@@ -62,7 +62,7 @@ Deliverables:
 - 2 Python data cleaning exercises
 - 1 Excel dashboard using sample business data
 
-PHASE 2: Days 31–60 | BI, Dashboards, and Data Storytelling
+PHASE 2: PRACTICE | BI, Dashboards, and Data Storytelling
 Goal: Turn raw data into insights and business-ready visuals.
 
 Focus Areas:
@@ -85,8 +85,8 @@ Deliverables:
 - 1 public dataset analysis report
 - 1 API/data extraction mini-project
 
-PHASE 3: Days 61–90 | AI-Enabled Analytics and Agentic AI Basics
-Goal: Use AI to speed up research, extraction, and analysis without ignoring the fundamentals.
+PHASE 3: CONFIDENCE | AI-Enabled Analytics and Applied Learning
+Goal: Use AI to support research, extraction, and analysis while building solid fundamentals.
 
 Focus Areas:
 - LLM-assisted data extraction from PDFs and reports
@@ -114,6 +114,6 @@ Recommended Priority Order
 3. Add agentic AI only after the core data skills are strong
 
 Outcome:
-By Day 90, she should be ready for entry-level Data Analyst, BI Analyst, or AI-enabled analytics roles with a credible portfolio and a stronger employability profile.
+With steady practice and reflection, she can build the confidence needed for entry-level Data Analyst, BI Analyst, or AI-enabled analytics roles with a credible portfolio and a stronger employability profile.
 
 This is formatted in a clean Word-style resume layout for easy copy into Microsoft Word or Google Docs.
