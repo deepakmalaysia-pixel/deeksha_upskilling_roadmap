@@ -1,3 +1,40 @@
+const accessLogKey = 'deeksha-access-log';
+
+function renderAccessLog() {
+  const list = document.getElementById('visitorLogList');
+  const lastStamp = document.getElementById('lastAccessStamp');
+  const logs = JSON.parse(localStorage.getItem(accessLogKey) || '[]');
+
+  if (list) {
+    if (!logs.length) {
+      list.innerHTML = '<li>No visits recorded yet.</li>';
+      return;
+    }
+
+    list.innerHTML = logs
+      .map((entry) => `<li>${entry.label}</li>`)
+      .join('');
+  }
+
+  if (lastStamp && logs.length) {
+    lastStamp.textContent = logs[0].label;
+  }
+}
+
+function recordAccess() {
+  const logEntry = {
+    time: new Date().toISOString(),
+    label: new Date().toLocaleString(),
+    userAgent: navigator.userAgent,
+    url: window.location.href
+  };
+
+  const existing = JSON.parse(localStorage.getItem(accessLogKey) || '[]');
+  const updated = [logEntry, ...existing].slice(0, 10);
+  localStorage.setItem(accessLogKey, JSON.stringify(updated));
+  renderAccessLog();
+}
+
 const phaseData = [
   {
     phase: 'Foundation',
@@ -233,8 +270,17 @@ function renderQuiz() {
   });
 }
 
-document.getElementById('taskList').addEventListener('change', handleCheckboxChange);
-document.getElementById('resetProgress').addEventListener('click', resetProgress);
+const taskList = document.getElementById('taskList');
+if (taskList) {
+  taskList.addEventListener('change', handleCheckboxChange);
+}
+
+const resetButton = document.getElementById('resetProgress');
+if (resetButton) {
+  resetButton.addEventListener('click', resetProgress);
+}
+
+recordAccess();
 
 document.addEventListener('keydown', (event) => {
   const isShortcut = (event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'y';

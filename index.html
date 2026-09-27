@@ -34,11 +34,37 @@
     <main>
       <section class="hero">
         <div class="container cv-shell">
+          <div class="usage-notice">
+            <p>
+              This learning resource is intended for guided use and should be shared responsibly. Please follow the planned sequence and avoid jumping ahead without guidance.
+            </p>
+            <div class="usage-log">
+              <span class="label">Latest access</span>
+              <strong id="lastAccessStamp">Waiting for first access...</strong>
+            </div>
+          </div>
+
+          <div class="welcome-brief">
+            <p>
+              Dear Deeksha, you are already doing something meaningful by taking this path step by step. Learning is not about rushing or being perfect — it is about steady progress, reflection, and trust in your growth. You are capable, and every small step is building your future.
+            </p>
+          </div>
+
+          <div class="visitor-log-box">
+            <div class="visitor-header">
+              <span class="label">Visitor log</span>
+              <strong>Recent checks</strong>
+            </div>
+            <ul id="visitorLogList" class="visitor-log-list">
+              <li>No visits recorded yet.</li>
+            </ul>
+          </div>
+
           <div class="profile-header">
             <div>
               <p class="eyebrow">Student progress tracker</p>
               <h1>Deeksha M G</h1>
-              <p class="role-line">90-Day Data Analyst Learning Journey</p>
+              <p class="role-line">Self-paced Data Analyst Learning Journey</p>
             </div>
             <div class="profile-meta">
               <span>Track milestones</span>
@@ -98,29 +124,45 @@
             <h2>How the journey unfolds</h2>
           </div>
 
-          <div class="flow-diagram" aria-label="Student learning flow diagram">
-            <div class="flow-node">
-              <span class="flow-step">01</span>
+          <div class="flow-diagram uml-flow" aria-label="Student learning flow diagram">
+            <div class="flow-node uml-node">
+              <div class="node-header">
+                <span class="flow-step">01</span>
+                <span class="node-role">Goal</span>
+              </div>
               <h3>Foundation</h3>
-              <p>SQL, Excel, Python basics</p>
+              <p class="uml-meta">Understand core tools and concepts.</p>
+              <p>Build the base with SQL, Excel, Python, and data fundamentals.</p>
             </div>
             <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-node">
-              <span class="flow-step">02</span>
+            <div class="flow-node uml-node">
+              <div class="node-header">
+                <span class="flow-step">02</span>
+                <span class="node-role">Action</span>
+              </div>
               <h3>Practice</h3>
-              <p>Projects, dashboards, analysis</p>
+              <p class="uml-meta">Apply learning through real tasks.</p>
+              <p>Work on dashboards, projects, and analysis to turn theory into skill.</p>
             </div>
             <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-node">
-              <span class="flow-step">03</span>
+            <div class="flow-node uml-node">
+              <div class="node-header">
+                <span class="flow-step">03</span>
+                <span class="node-role">Review</span>
+              </div>
               <h3>Confidence</h3>
-              <p>AI-assisted insight, reflection</p>
+              <p class="uml-meta">Check progress and improve.</p>
+              <p>Reflect, self-assess, revise, and strengthen understanding before moving ahead.</p>
             </div>
             <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-node highlight">
-              <span class="flow-step">04</span>
+            <div class="flow-node uml-node highlight">
+              <div class="node-header">
+                <span class="flow-step">04</span>
+                <span class="node-role">Result</span>
+              </div>
               <h3>Career Ready</h3>
-              <p>Portfolio, clarity, direction</p>
+              <p class="uml-meta">Prepared for opportunity.</p>
+              <p>Present your portfolio confidently and move toward interviews and job readiness.</p>
             </div>
           </div>
         </div>
@@ -342,7 +384,7 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>Deeksha M G | 90-Day Roadmap for Data & AI Employability</p>
+        <p>Deeksha M G | Self-paced Roadmap for Data & AI Growth</p>
       </div>
     </footer>
 

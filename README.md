@@ -1,6 +1,12 @@
 DEEKSHA M G
 Mangalore, India | deekshamg7@gmail.com | +91 9591680144 | [LinkedIn](https://linkedin.com)
 
+IMPORTANT NOTE
+Follow the planned learning order step by step. This roadmap is designed to build skills in a logical sequence, so please do not skip ahead or jump between phases. Each level prepares you for the next one and helps you build confidence without pressure.
+
+PROJECT DESCRIPTION
+This project is a self-paced learning roadmap for a student preparing for a data analytics and AI-enabled career path. It is designed to be encouraging, practical, and beginner-friendly, with a clear progression from core technical foundations to business dashboarding and then AI-assisted analytics. The goal is to help the learner grow steadily, reflect on progress, and stay motivated without feeling rushed.
+
 PROJECT PREVIEW
 Open locally in the browser: file:///c:/Users/Deepak/Desktop/AASHA%20DEEPAK/Deeksha%20MCA/Deeksha%20Resume/index.html
 
