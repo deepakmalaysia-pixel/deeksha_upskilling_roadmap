@@ -1,8 +1,7 @@
 const phaseData = [
   {
-    phase: 'Phase 1',
-    title: 'Core Employability Skills',
-    timeline: 'Days 1–30',
+    phase: 'Foundation',
+    title: 'SQL, Excel & Data Basics',
     items: [
       'Learn SQL basics: SELECT, WHERE, GROUP BY, ORDER BY',
       'Practice joins, subqueries, and aggregate functions',
@@ -12,9 +11,8 @@ const phaseData = [
     ]
   },
   {
-    phase: 'Phase 2',
-    title: 'BI, Dashboards, and Storytelling',
-    timeline: 'Days 31–60',
+    phase: 'Practice',
+    title: 'BI, Dashboards & Storytelling',
     items: [
       'Create a Power BI or Tableau dashboard project',
       'Learn KPI design and dashboard storytelling',
@@ -24,9 +22,8 @@ const phaseData = [
     ]
   },
   {
-    phase: 'Phase 3',
+    phase: 'Confidence',
     title: 'AI-Enabled Analytics',
-    timeline: 'Days 61–90',
     items: [
       'Use AI to extract insights from PDFs or reports',
       'Summarize public or government data using structured workflows',
@@ -72,7 +69,7 @@ function renderPhaseCards() {
     .map(
       (phase) => `
         <article class="phase-card">
-          <span class="phase-meta">${phase.timeline}</span>
+          <span class="phase-meta">${phase.phase}</span>
           <h3>${phase.title}</h3>
           <ul>
             ${phase.items
@@ -112,9 +109,35 @@ function updateProgress() {
   const done = progressItems.filter((item) => item.checked).length;
   const percent = total ? Math.round((done / total) * 100) : 0;
 
+  let phase = 'Foundation';
+  if (percent >= 67) {
+    phase = 'Confidence';
+  } else if (percent >= 34) {
+    phase = 'Practice';
+  }
+
+  const encouragementBox = document.getElementById('encouragementBox');
+  let message = 'Well done for taking one more step forward. Every small effort counts, and every completed task brings you closer to confidence.';
+
+  if (percent >= 100) {
+    message = 'Amazing work, Deeksha! 🎉 You completed the full learning path. Your consistency is creating real confidence.';
+  } else if (percent >= 75) {
+    message = 'Dear Deeksha, you are almost there. 🌟 Keep going — your effort is already becoming strength.';
+  } else if (percent >= 50) {
+    message = 'Great progress, Deeksha! 💪 You are building momentum, and that matters more than perfection.';
+  } else if (percent >= 25) {
+    message = 'Nice effort, Deeksha! 🌱 Small steps are still strong steps, and you are moving forward.';
+  }
+
+  if (encouragementBox) {
+    encouragementBox.innerHTML = `<p>${message}</p>`;
+  }
+
   document.getElementById('progressFill').style.width = `${percent}%`;
   document.getElementById('progressText').textContent = `${percent}% complete`;
   document.getElementById('progressCount').textContent = `${done} / ${total} tasks`;
+  document.getElementById('currentPhase').textContent = phase;
+  document.getElementById('heroProgress').textContent = `${percent}%`;
 }
 
 function saveProgress() {
@@ -142,8 +165,87 @@ function resetProgress() {
   renderTaskList();
 }
 
+const quizData = [
+  {
+    question: 'Which SQL clause is used to filter rows before grouping?',
+    options: ['WHERE', 'GROUP BY', 'HAVING', 'ORDER BY'],
+    answer: 'WHERE',
+    explanation: 'WHERE filters rows before aggregation, while HAVING filters grouped results.'
+  },
+  {
+    question: 'Which tool is commonly used to create interactive dashboards for business reporting?',
+    options: ['Power BI', 'Git', 'HTML', 'Windows'],
+    answer: 'Power BI',
+    explanation: 'Power BI is widely used for interactive dashboard reporting and data visualization.'
+  },
+  {
+    question: 'What is the best next step when a concept feels difficult?',
+    options: ['Skip it and continue', 'Revisit the resource and practice again', 'Ignore it completely', 'Only read once'],
+    answer: 'Revisit the resource and practice again',
+    explanation: 'Strong learning comes from repetition, revision, and guided practice.'
+  }
+];
+
+let quizIndex = 0;
+
+function renderQuiz() {
+  const question = quizData[quizIndex];
+  const questionEl = document.getElementById('quizQuestion');
+  const optionsEl = document.getElementById('quizOptions');
+  const feedbackEl = document.getElementById('quizFeedback');
+
+  if (!question || !questionEl || !optionsEl) return;
+
+  questionEl.textContent = question.question;
+  optionsEl.innerHTML = '';
+  feedbackEl.textContent = '';
+
+  question.options.forEach((option) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'quiz-option';
+    button.textContent = option;
+    button.addEventListener('click', () => {
+      const isCorrect = option === question.answer;
+      const buttons = optionsEl.querySelectorAll('.quiz-option');
+
+      buttons.forEach((btn) => {
+        btn.disabled = true;
+        if (btn.textContent === question.answer) {
+          btn.classList.add('correct');
+        }
+        if (btn === button && !isCorrect) {
+          btn.classList.add('incorrect');
+        }
+      });
+
+      feedbackEl.textContent = isCorrect
+        ? `Correct — ${question.explanation}`
+        : `Not quite. ${question.explanation}`;
+
+      setTimeout(() => {
+        quizIndex = (quizIndex + 1) % quizData.length;
+        renderQuiz();
+      }, 1500);
+    });
+
+    optionsEl.appendChild(button);
+  });
+}
+
 document.getElementById('taskList').addEventListener('change', handleCheckboxChange);
 document.getElementById('resetProgress').addEventListener('click', resetProgress);
 
+document.addEventListener('keydown', (event) => {
+  const isShortcut = (event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'y';
+  if (!isShortcut) return;
+
+  const ownerScore = document.querySelector('.owner-score');
+  if (!ownerScore) return;
+
+  ownerScore.classList.toggle('hidden');
+});
+
 renderPhaseCards();
 renderTaskList();
+renderQuiz();

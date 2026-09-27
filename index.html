@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deeksha | 90-Day Skill Roadmap</title>
+    <title>Deeksha M G | Student Progress Tracker</title>
     <meta
       name="description"
-      content="A practical 90-day roadmap for Deeksha to build employable data analytics skills and AI-enabled workflows."
+      content="A learner progress tracker for a single student working toward Data Analyst skills using SQL, Python, Excel, Power BI, Tableau, and business analytics concepts."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,32 +33,94 @@
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Career Growth Plan</p>
-            <h1>Build employability in 90 days.</h1>
-            <p class="lead">
-              A practical roadmap to strengthen SQL, Python, data analysis, BI dashboards,
-              and AI-enabled workflows—without jumping straight into advanced agentic AI.
-            </p>
-            <div class="cta-row">
-              <a class="primary-btn" href="#roadmap">Start Roadmap</a>
-              <button id="resetProgress" class="secondary-btn" type="button">Reset Progress</button>
+        <div class="container cv-shell">
+          <div class="profile-header">
+            <div>
+              <p class="eyebrow">Student progress tracker</p>
+              <h1>Deeksha M G</h1>
+              <p class="role-line">90-Day Data Analyst Learning Journey</p>
+            </div>
+            <div class="profile-meta">
+              <span>Track milestones</span>
+              <span>SQL • Python • Excel • Power BI</span>
             </div>
           </div>
 
-          <div class="hero-card">
-            <div class="mini-stat">
-              <span class="label">Target Role</span>
-              <strong>Data Analyst / AI-Enabled Analyst</strong>
+          <div class="student-note">
+            <p>Dear Deeksha,</p>
+            <p>
+              This roadmap is here to support you at your own pace. You do not need to rush or feel pressured to have everything figured out.
+              It is meant to help you learn steadily, practice with confidence, and grow one skill at a time.
+              You are encouraged to pause, revisit concepts, ask for help, and celebrate every small win along the way.
+            </p>
+          </div>
+
+          <div id="encouragementBox" class="encouragement-box">
+            <p>Well done for taking one more step forward. Every small effort counts, and every completed task brings you closer to confidence. 🌱</p>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="section-intro">Personal learning overview</p>
+              <p class="lead">
+                This dashboard helps you track progress through SQL, Python, Excel, Power BI, Tableau,
+                and business analytics in a calm, guided, and encouraging way. It includes self-assessment,
+                practice checkpoints, reflection, and support so learning feels steady, realistic, and confidence-building.
+              </p>
+              <div class="cta-row">
+                <a class="primary-btn" href="#roadmap">View Roadmap</a>
+                <button id="resetProgress" class="secondary-btn" type="button">Reset Progress</button>
+              </div>
             </div>
-            <div class="mini-stat">
-              <span class="label">Focus</span>
-              <strong>SQL + Python + BI + AI</strong>
+
+            <div class="hero-card">
+              <div class="mini-stat">
+                <span class="label">Learner</span>
+                <strong>Deeksha M G</strong>
+              </div>
+              <div class="mini-stat">
+                <span class="label">Current phase</span>
+                <strong id="currentPhase">Phase 1</strong>
+              </div>
+              <div class="mini-stat">
+                <span class="label">Overall progress</span>
+                <strong id="heroProgress">0%</strong>
+              </div>
             </div>
-            <div class="mini-stat">
-              <span class="label">Goal</span>
-              <strong>Portfolio + Employability</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="learning-flow">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Learning flow</p>
+            <h2>How the journey unfolds</h2>
+          </div>
+
+          <div class="flow-diagram" aria-label="Student learning flow diagram">
+            <div class="flow-node">
+              <span class="flow-step">01</span>
+              <h3>Foundation</h3>
+              <p>SQL, Excel, Python basics</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-node">
+              <span class="flow-step">02</span>
+              <h3>Practice</h3>
+              <p>Projects, dashboards, analysis</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-node">
+              <span class="flow-step">03</span>
+              <h3>Confidence</h3>
+              <p>AI-assisted insight, reflection</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-node highlight">
+              <span class="flow-step">04</span>
+              <h3>Career Ready</h3>
+              <p>Portfolio, clarity, direction</p>
             </div>
           </div>
         </div>
@@ -68,10 +130,46 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Roadmap</p>
-            <h2>Step-by-step learning plan</h2>
+            <h2>Self-paced learning plan</h2>
           </div>
 
           <div id="phaseCards" class="phase-grid"></div>
+        </div>
+      </section>
+
+      <section class="support-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Support</p>
+            <h2>Gentle guidance for steady progress</h2>
+          </div>
+
+          <div class="support-grid">
+            <article class="support-card">
+              <span class="project-tag">Learning style</span>
+              <h3>Learn at your own pace</h3>
+              <p>There are no strict deadlines here. The goal is understanding, practice, and confidence.</p>
+            </article>
+
+            <article class="support-card">
+              <span class="project-tag">Quick check</span>
+              <h3>Self-review quiz</h3>
+              <p>Use the short quiz to confirm what you know before moving to the next topic.</p>
+            </article>
+
+            <article class="support-card">
+              <span class="project-tag">Ask for help</span>
+              <h3>Retry, revise, improve</h3>
+              <p>If a concept feels difficult, pause, revisit the lesson, and practice again without pressure.</p>
+            </article>
+          </div>
+
+          <div class="quiz-box">
+            <h3>Quick self-check</h3>
+            <div id="quizQuestion" class="quiz-question"></div>
+            <div id="quizOptions" class="quiz-options"></div>
+            <p id="quizFeedback" class="quiz-feedback"></p>
+          </div>
         </div>
       </section>
 
@@ -104,11 +202,52 @@
         </div>
       </section>
 
+      <section class="assessment-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Self-assessment</p>
+            <h2>Check your understanding before moving on</h2>
+          </div>
+
+          <div class="assessment-grid">
+            <article class="assessment-card">
+              <h3>Can I explain this in my own words?</h3>
+              <div class="rating-row">
+                <button class="rating-btn" type="button">Very confident</button>
+                <button class="rating-btn" type="button">Mostly confident</button>
+                <button class="rating-btn" type="button">Need revision</button>
+              </div>
+            </article>
+
+            <article class="assessment-card">
+              <h3>Can I solve a similar problem without notes?</h3>
+              <div class="rating-row">
+                <button class="rating-btn" type="button">Yes</button>
+                <button class="rating-btn" type="button">Sometimes</button>
+                <button class="rating-btn" type="button">Not yet</button>
+              </div>
+            </article>
+
+            <article class="assessment-card">
+              <h3>What should I do next?</h3>
+              <div class="rating-row">
+                <button class="rating-btn" type="button">Move ahead</button>
+                <button class="rating-btn" type="button">Revise again</button>
+                <button class="rating-btn" type="button">Ask for help</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="resources" class="resources">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Study resources</p>
-            <h2>Recommended online learning sources</h2>
+            <h2>Curated free learning sources</h2>
+            <p class="lead" style="margin-top: 0.75rem; font-size: 0.95rem; opacity: 0.9;">
+              Carefully selected free resources from YouTube, official documentation, and beginner-friendly platforms.
+            </p>
           </div>
 
           <div class="resource-grid">
@@ -142,9 +281,9 @@
             <article class="resource-card">
               <h3>Power BI & Tableau</h3>
               <ul>
-                <li><a class="resource-link" href="https://www.youtube.com/@GuyInACube" target="_blank" rel="noreferrer">Guy in a Cube (YouTube)</a></li>
-                <li><a class="resource-link" href="https://www.youtube.com/@DataSchool" target="_blank" rel="noreferrer">Data School</a></li>
-                <li><a class="resource-link" href="https://learn.microsoft.com/en-us/training/browse/?products=power-bi" target="_blank" rel="noreferrer">Microsoft Learn</a></li>
+                <li><a class="resource-link" href="https://www.youtube.com/@GuyInACube" target="_blank" rel="noreferrer">Guy in a Cube (YouTube) — free Power BI tutorials</a></li>
+                <li><a class="resource-link" href="https://www.youtube.com/results?search_query=tableau+for+beginners+free+youtube" target="_blank" rel="noreferrer">Tableau beginner playlists on YouTube</a></li>
+                <li><a class="resource-link" href="https://learn.microsoft.com/en-us/training/browse/?products=power-bi" target="_blank" rel="noreferrer">Microsoft Learn — free Power BI modules</a></li>
               </ul>
             </article>
 
@@ -152,7 +291,7 @@
               <h3>AI-Enabled Analytics</h3>
               <ul>
                 <li><a class="resource-link" href="https://www.youtube.com/results?search_query=freeCodeCamp+ai+for+data+analysis" target="_blank" rel="noreferrer">freeCodeCamp.org (YouTube)</a></li>
-                <li><a class="resource-link" href="https://www.deeplearning.ai/" target="_blank" rel="noreferrer">DeepLearning.AI</a></li>
+                <li><a class="resource-link" href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noreferrer">Google ML Crash Course — free</a></li>
                 <li><a class="resource-link" href="https://cookbook.openai.com/" target="_blank" rel="noreferrer">OpenAI Cookbook</a></li>
               </ul>
             </article>
@@ -206,6 +345,12 @@
         <p>Deeksha M G | 90-Day Roadmap for Data & AI Employability</p>
       </div>
     </footer>
+
+    <div class="owner-score hidden" aria-label="Owner-only ATS score panel">
+      <span class="owner-label">Owner view</span>
+      <strong>ATS Match: 86/100</strong>
+      <small>Data Analyst role</small>
+    </div>
 
     <script src="script.js"></script>
   </body>

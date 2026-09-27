@@ -1,6 +1,11 @@
 DEEKSHA M G
 Mangalore, India | deekshamg7@gmail.com | +91 9591680144 | [LinkedIn](https://linkedin.com)
 
+PROJECT PREVIEW
+Open locally in the browser: file:///c:/Users/Deepak/Desktop/AASHA%20DEEPAK/Deeksha%20MCA/Deeksha%20Resume/index.html
+
+Note: This workspace does not currently include a configured Git remote or hosted deployment URL, so the final available preview here is the local file URL above. Once the site is published to GitHub Pages or another host, update this section with the live URL.
+
 PROFESSIONAL SUMMARY
 Data Science postgraduate with hands-on experience in Python, SQL, and data analytics workflows. Skilled in data cleaning, transformation, visualization, and dashboard development for business insights. Strong understanding of data quality improvement, analytical reporting, and workflow optimization. Seeking to contribute as a Data Analyst or Associate Data Engineer in a growth-oriented organization.
 
